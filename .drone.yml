@@ -1,0 +1,12 @@
+kind: pipeline
+type: docker
+name: node1
+
+steps:
+- name: build
+  image: golang:1.15
+  commands:
+  - make linux
+
+node:
+  project: foo
