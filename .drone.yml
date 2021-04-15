@@ -1,10 +1,11 @@
+---
 kind: pipeline
-type: kubernetes
+type: docker
 name: default
 
 steps:
-- name: test
-  image: golang
+- name: greeting
+  image: golang:1.16
   commands:
-  - go test
   - go build
+  - go test
